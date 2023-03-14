@@ -1,0 +1,27 @@
+.card_heading_data
+{
+    text-align: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card_heading_data h3
+{
+    font-family: 'SuisseIntl-SemiBold', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #1a1d23;
+    text-shadow: 3px 3px 10px black;
+}
+
+.card_heading_data p
+{
+    font-family: 'SuisseIntl-Regualr', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 16px black;
+}

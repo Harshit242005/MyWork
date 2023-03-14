@@ -1,0 +1,64 @@
+
+
+.card_hovering_box
+{
+    width: 600px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    box-shadow: 0 0 10px 5px black;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.card_hovering_box:hover
+{
+    box-shadow: none;
+    border: none;
+}
+
+.card_hovering_box .card_hovering_box_text
+{
+    color: white;
+    padding: 25px;
+    font-family: 'SuisseIntl-Regular', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.2s;
+}
+
+.card_hovering_box:hover .card_hovering_box_text
+{
+    text-shadow: 2px 2px 5px white;
+}
+
+.card_hovering_box .card_hovering_box_button
+{
+    padding: 25px;
+}
+
+
+.card_hovering_box .card_hovering_box_button button
+{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-family: 'SuisseIntl-Regular', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(37, 214, 216);
+    background-color: rgb(216, 230, 231);
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.card_hovering_box:hover .card_hovering_box_button button
+{
+    box-shadow: 0 0 10px 5px white;
+    text-shadow: 2px 2px 5px white;
+    border: none;
+}

@@ -1,0 +1,43 @@
+.brand_logo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.brand_logo .brand_logo_text
+{
+    text-align: center;
+}
+
+.brand_logo .brand_logo_text h2
+{
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: suisseintl-semibold,sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    color: #1a1d23;
+}
+
+.brand_logo .brands
+{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand_logo .brands .brand_image img
+{
+    display: inline-block;
+    vertical-align: middle;
+    height: 80px;
+}
+
+

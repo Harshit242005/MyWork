@@ -1,0 +1,159 @@
+.card_text_button
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    margin-left: 250px;
+}
+
+.card_text_button .card_text 
+{
+    width: 60%;
+}
+
+.card_text_button .card_text h3
+{
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: normal;
+    font-family: 'SuisseIntl-Regular', sans-serif;
+    color: #1a1d23;
+    margin: 0;
+    text-align: left;
+}
+
+.card_text_button .card_text p
+{
+    font-family: 'SuisseIntl-Regular', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    text-align: left;
+    line-height: 24px;
+}
+
+.card_text_button .card_button
+{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_text_button .card_button .card_button_collection
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_text_button .card_button .card_button_collection .button_image
+{
+    transition: 0.1s;
+    border-radius: 10px;
+    box-shadow: none;
+    display: flex;
+    gap: 5px;
+    height: 32px;
+    margin-right: 8px;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 3px 10px;
+    align-items: center;
+}
+
+.card_text_button .card_button .card_button_collection .button_image:hover
+{
+    box-shadow: 0 0 10px 0.1px black;
+    height: 35px;
+    border: none;
+}
+
+.card_text_button .card_button .card_button_collection .button_image p
+{
+    color: #1a1d23;
+    font-weight: 550;
+    font-family: 'SuisseIntl-Regular', sans-serif;
+}
+
+.card_image_button img
+{
+    width: 556px;
+    height: 472px;
+    margin-left: -25%;
+}
+
+.card_image_text_button
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width: 800px) {
+    .card_image_button
+    {
+        margin-left: 0px;
+    }
+    .card_text_button
+    {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card_image_text_button
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+    .card_text_button
+    {
+        margin-left: 0px;
+    }
+
+    .card_image_button
+    {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .card_image_button img
+    {
+        margin-left: auto;
+        margin-right: auto;
+        width: 450px;
+        height: 350px;   
+    }
+
+    .card_text_button .card_text 
+    {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .card_text_button .card_text h3
+    {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .card_text_button .card_text p
+    {
+        text-align: center;
+        font-weight: 400;
+    }
+}
+

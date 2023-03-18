@@ -1,0 +1,741 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing page</title>
+    <link rel="stylesheet" href="LandingPageStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div>
+        <!-- navbar starts -->
+
+        <div class="navbar_container">
+            <div class="top_info">
+                <p>we know support <span>optimism</span> on testnet. <a href="">Find out more</a></p>
+            </div>
+            <div id="nav" class="navbar">
+                <div class="navbar_image">
+                    <img id="logo_image" src="example/companylogo/chainstack_copy.jpg" alt="chainstack logo">
+                </div>
+                <div id="navbar_button" class="navbar_mainlinks">
+                    <a href="">Prodcut</a>
+                    <a href="">Pricing</a>
+                    <a href="">Enterprise</a>
+                    <a href="">Customers</a>
+                    <a href="">Blog</a>
+                    <a href="">Docs</a>
+                </div>
+                <div id="click_button" class="navbar_buttons">
+                    <button>Log in</button>
+                    <button>Start for free</button>
+                </div>
+                <div id="open" class="open_button">
+                    <i class="fa fa-bars"></i>
+                </div>
+
+                <button class="close_button" id="close">&times;</button>
+            </div>
+
+        </div>
+
+        <script>
+            var open_button = document.getElementById('open');
+            var start = document.getElementById('nav');
+            var company_logo = document.getElementById('logo_image');
+            var last_button = document.getElementById('click_button');
+            var buttons = document.getElementById('navbar_button');
+            var close_button = document.getElementById('close');
+            open_button.addEventListener("click", function () {
+                company_logo.style.display = "none";
+                buttons.style.display = "flex";
+                buttons.style.flexDirection = "column";
+                buttons.style.justifyContent = "center";
+                buttons.style.alignItems = "center";
+                buttons.style.gap = "25px";
+                start.style.flexDirection = "column";
+                start.style.justifyContent = "center";
+                start.style.gap = "0px";
+                last_button.style.display = "block";
+                last_button.style.flexDirection = "column";
+                last_button.style.justifyContent = "center";
+                close_button.style.display = "block";
+                open_button.style.display = "none";
+            });
+            close_button.addEventListener("click", function () {
+                buttons.style.display = "none"
+                company_logo.style.display = "block";
+                last_button.style.display = "none";
+                close_button.style.display = 'none';
+                start.style.flexDirection = "row";
+                last_button.style.flexDirection = "row";
+                start.style.gap = "100px";
+                open_button.style.display = "block"
+            })
+        </script>
+        <!-- navbar end -->
+
+        <!-- first card starts -->
+        <div class="hori_card_image">
+            <div class="hori_image">
+                <img src="example/container_image/card_side_image.jpg" alt="card side image">
+            </div>
+            <div class="hori_text">
+                <h3>Chainstack Subgraphs</h3><br>
+                <p>Fast and reliable indexing solution and hosting of your subgraphs.</p>
+            </div>
+            <div class="hori_button">
+                <button>Find out more</button>
+            </div>
+        </div>
+        <!-- first card end -->
+
+        <!-- card heading starts -->
+        <div class="card_heading_data">
+            <h3>Deploy, manage and scale</h3>
+            <p>From experimentation to production, Chainstack provides everything you need to build and scale your
+                blockchain solution.</p>
+        </div>
+        <!-- card heading end -->
+
+        <!-- card starts -->
+        <div class="card-section">
+            <div class="card">
+                <div class="card-image">
+                    <img src="example/card_1_image.jpg" alt="first card icon">
+                </div>
+                <div class="card-text">
+                    <h4>Optimised for growth</h4>
+                    <p>Grow your network by inviting other members to deploy their own infrastructure through simple network
+                        management and operation tools.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="example/card_2_image.jpg" alt="second card icon">
+                </div>
+                <div class="card-text">
+                    <h4>Flexibility to deploy anywhere</h4>
+                    <p>Deploy network infrastructure where you need it. Choose between Chainstack-managed cloud on Google
+                        Cloud
+                        Platform, Amazon Web Services, or Microsoft Azure, and private hosting, whether this be your own
+                        cloud
+                        or data center.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="example/card_3_image.jpg" alt="third card icon">
+                </div>
+                <div class="card-text">
+                    <h4>Freedom to choose</h4>
+                    <p>Build and deploy on the blockchain protocol that meets your needs, then never worry about updates or
+                        changes to the protocol again.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="example/card_4_image.jpg" alt="fourth card icon">
+                </div>
+                <div class="card-text">
+                    <h4>Enterprise-grade security</h4>
+                    <p>Secure node connections and key security best-practices are built in to ensure you’re always in
+                        control.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- card ends -->
+
+        <!-- hovering card starts -->
+        <div class="card_hovering_box">
+            <div id="text" class="card_hovering_box_text">
+              <p>Chainstack uses cookies to provide you with a secure and
+                personalized experience on its website. <a href="http://"> Learn more. </a></p>
+            </div>
+            <div class="card_hovering_box_button">
+              <button id="accept_button">
+                Accept
+              </button>
+            </div>
+          </div>
+          <script>
+            var box = document.getElementsByClassName("card_hovering_box")[0];
+            var text = document.getElementById("text");
+            var button = document.getElementById("accept_button");
+            window.onload = function () {
+              box.style.display = "flex";
+              box.style.flexDirection = "row";
+              box.style.gap = "25px";
+              box.style.justifyContent = "center";
+              box.style.alignContent = "center";
+              box.style.alignItems = "center";
+            };
+        
+            var timer;
+        
+            box.addEventListener("mouseover", function () {
+              timer = setTimeout(function () {
+                box.style.backgroundColor = "transparent";
+                text.style.color = "black"
+              }, 5000); // set the timeout to 5 seconds (5000 milliseconds)
+            });
+        
+            box.addEventListener("mouseout", function () {
+              clearTimeout(timer);
+              box.style.backgroundColor = "black"; // set the background color back to its original value
+              text.style.color = "white"
+            });
+        
+            button.addEventListener("click", function() {
+              box.style.display = "none";
+            });
+          </script>
+          <!-- hovering card end -->
+
+          <!-- carousel start-->
+          <!--<div class="carousel">
+            <div class="carousel_card">
+    
+                <div class="carousel_card_image">
+                    <img src="example/brand_loog/gamerse.png" alt="gamerse logo">
+                </div>
+    
+                <div class="carousel_card_text">
+                    <p> “Chainstack saves us time and resources so our team can focus on accelerating product development
+                        and
+                        delivering a unifying social hub.”</p>
+                </div>
+    
+                <div class="carousel_card_founder">
+    
+                    <div class="carousel_card_founder_image">
+                        <img src="example/brand_loog/gamerse_founder.png" alt="gamerse founder image">
+                    </div>
+    
+                    <div class="carousel_card_founder_text">
+                        <h3>Khaled Jama</h3>
+                        <p>Founder & CEO, Gamerse</p>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+            <div class="carousel_card">
+    
+                <div class="carousel_card_image">
+                    <img src="example/brand_loog/linkpool.png" alt="gamerse logo">
+                </div>
+    
+                <div class="carousel_card_text">
+                    <p> “Chainstack’s services are the most reliable, cost-effective, and have the support necessary to use
+                        as
+                        our primary backstop when operating Chainlink nodes.”</p>
+                </div>
+    
+                <div class="carousel_card_founder">
+    
+                    <div class="carousel_card_founder_image">
+                        <img src="example/brand_loog/linkpool_founder.png" alt="linkpool founder image">
+                    </div>
+    
+                    <div class="carousel_card_founder_text">
+                        <h3>Ian Read</h3>
+                        <p>Director of operations, Linkpool</p>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+            <div class="carousel_card">
+    
+                <div class="carousel_card_image">
+                    <img src="example/brand_loog/blockwallet.png" alt="gamerse logo">
+                </div>
+    
+                <div class="carousel_card_text">
+                    <p> “Chainstack shares some of our fundamental values on privacy and has always been reliable and
+                        supportive.”</p>
+                </div>
+    
+                <div class="carousel_card_founder">
+    
+                    <div class="carousel_card_founder_image">
+                        <img src="example/brand_loog/blockwallet_founder.png" alt="blockwallet founder image">
+                    </div>
+    
+                    <div class="carousel_card_founder_text">
+                        <h3>Aleksandras Gaska</h3>
+                        <p>Founder and opeartions lead, Blockwallet</p>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>-->
+        <!-- carousel end -->
+
+        <!-- button dashboard start -->
+        <div style="margin-top: 100px;" class="card_image_text_button">
+            <div class="card_text_button">
+                <div class="card_text">
+                    <h3>Multi-chain by design</h3>
+                    <p>Chainstack is a single point of access for all your blockchain projects across any protocol. Deploy a
+                        node to a public network or create a consortium network in just a few clicks.</p>
+                </div>
+    
+                <div class="card_button">
+                    <div class="card_button_collection">
+                        <div class="button_image" style="background: #F0F0F0;"><img src="example/button_image/eth_logo.svg"
+                                alt="Ethereum logo">
+                            <p>Ethereum</p>
+                        </div>
+                        <div class="button_image" style="background: #F6F3FF;"><img src="example/button_image/poly_logo.svg"
+                                alt="Polygon logo">
+                            <p>Polygon</p>
+                        </div>
+                        <div class="button_image" style="background: #FFFAE9;"><img src="example/button_image/bnb_logo.svg"
+                                alt="BNB logo">
+                            <p>BNB chain network</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card_button">
+                    <div class="card_button_collection">
+                        <div class="button_image" style="background: #FFF5F5;"><img src="example/button_image/aval_logo.svg"
+                                alt="avalanche logo">
+                            <p>Avalanche</p>
+                        </div>
+                        <div class="button_image" style="background: #EDF6FF;"><img src="example/button_image/arb_logo.svg"
+                                alt="arbitrum logo">
+                            <p>Arbitrum</p>
+                        </div>
+                        <div class="button_image" style="background: #FFF5F5;"><img src="example/button_image/opt_logo.svg"
+                                alt="optimise logo">
+                            <p>Optimise</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card_button">
+                    <div class="card_button_collection">
+                        <div class="button_image" style="background: #F3F3F4;"><img src="example/button_image/near_logo.svg"
+                                alt="near logo">
+                            <p>Near</p>
+                        </div>
+                        <div class="button_image" style="background: #F4FFF2;"><img src="example/button_image/aurora_logo.svg"
+                                alt="aurora logo">
+                            <p>Aurora</p>Aurora
+                        </div>
+                        <div class="button_image" style="background: #EEFFF8;"><img src="example/button_image/solana_logo.svg"
+                                alt="solana logo">
+                            <p>Solana</p>
+                        </div>
+                        <div class="button_image" style="background: #F5F5F5;"><img src="example/button_image/aptos_logo.svg"
+                                alt="aptos logo">
+                            <p>Aptos</p>
+                        </div>
+                    </div>
+                
+    
+                <div class="card_button">
+                    <div class="card_button_collection">
+                        <div class="button_image" style="background: #EDF8F5;"><img src="example/button_image/gnosis_logo.svg"
+                                alt="gnosis logo">
+                            <p>Gnosis</p>
+                        </div>
+                        <div class="button_image" style="background: #F0F6FF;"><img src="example/button_image/cronos_logo.svg"
+                                alt="cronos logo">
+                            <p>Cronos</p>
+                        </div>
+                        <div class="button_image" style="background: #F0F6FF;"><img src="example/button_image/filecoin_logo.svg"
+                                alt="filecoin logo">
+                            <p>Filecoin</p>
+                        </div>
+                    </div>
+                </div>    
+    
+                    <div class="card_button">
+                        <div class="card_button_collection">
+                            <div class="button_image" style="background: #EBF3FF;"><img src="example/button_image/fantom_logo.svg"
+                                    alt="fantom logo">
+                                <p>Fantom</p>
+                            </div>
+                            <div class="button_image" style="background: #EEFBFF;"><img src="example/button_image/starknet_logo.svg"
+                                    alt="starknet logo">
+                                <p>Starknet</p>
+                            </div>
+                            <div class="button_image" style="background: #EEFBFF;"><img src="example/button_image/harmony_logo.svg"
+                                    alt="harmonyo logo">
+                                <p>Harmony</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card_button">
+                        <div class="card_button_collection">
+                            <div class="button_image" style="background: #EDF6FF;"><img src="example/button_image/tezos_logo.svg"
+                                    alt="tezos logo">
+                                <p>Tezos</p>
+                            </div>
+                            <div class="button_image" style="background: #F4FFF2;"><img src="example/button_image/fuse_logo.svg"
+                                    alt=" fuse">
+                                <p>Fuse</p>
+                            </div>
+                            <div class="button_image" style="background: #FAF5EE;"><img src="example/button_image/bitcoin_logo.svg"
+                                    alt="bitcoin logo">
+                                <p>Bitcoin</p>
+                            </div>
+                            <div class="button_image" style="background: #EEFBFF;">
+                                <p style="color: #007BFF;">See all</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="card_image_button">
+                <img src="example/button_image/card_image.jpg" alt="card dashboard image">
+            </div>
+        </div>
+        <!-- button dashboard end -->
+
+        <!-- globe card start -->
+        <div class="line_image_world">
+            <div>
+                <svg viewBox="0 0 100 0.01">
+                    <line x1="10" y1="0" x2="90" y2="0" stroke="black" stroke-width="0.1" stroke-linecap="round"
+                        stroke-opacity="0.2" />
+                </svg>
+            </div>
+            <div class="world_image_data">
+                <div class="world_image">
+                    <img src="example/chainstack_world.jpg" alt="chain stack world">
+                </div>
+                <div class="world_text">
+                    <h3>Globally distributed</h3>
+                    <p>With our globally distributed infrastructure, deploy nodes on any cloud, including the Chainstack
+                        Cloud,
+                        which we specifically designed and optimized for running blockchain nodes. By utilizing our native
+                        cloud, enjoy the highest performance, stability, and security, while also having the flexibility of
+                        using a hybrid infrastructure.</p>
+                    <p>We make it easy for you to remove technology lock-ins and become truly agile, so you can focus on
+                        what
+                        really matters – innovating and creating.</p>
+                    <a href="https://chainstack.com/pricing/">Find out more</a>
+                </div>
+            </div>
+            <div>
+                <svg viewBox="0 0 100 0.01">
+                    <line x1="10" y1="0" x2="90" y2="0" stroke="black" stroke-width="0.1" stroke-linecap="round"
+                        stroke-opacity="0.2" />
+                </svg>
+            </div>
+        </div>
+        <!-- globe card end -->
+
+        <!-- mobile dashboard start -->
+        <div class="line_image_world">
+            <div>
+                <svg viewBox="0 0 100 0.01">
+                    <line x1="10" y1="" x2="90" y2="0" stroke="black" stroke-width="1" stroke-linecap="round"
+                        stroke-opacity="0.2" />
+                </svg>
+            </div>
+            <div class="world_image_data">
+                <div class="world_text">
+                    <h3>Affordable and transparent</h3>
+                    <p>At Chainstack, we understand the challenges of budgeting for engineering costs. That’s why we’ve
+                        worked closely with hundreds of developers and customers to create a pricing structure that is fair,
+                        transparent, and predictable. There’s no need to worry about guessing or estimating compute units as
+                        our pricing eliminates hidden fees, and what you use is what you pay for, with no exceptions.</p>
+                    <p>All requests are treated equally, regardless of computation resources, making it easy for
+                        organizations to budget and pay as they grow. Our unique pricing model counts all requests as 1x,
+                        regardless of weight, size, or type of method being used. This means you can save up to 10x in costs
+                        compared to other providers in the market, and our current customers have already saved thousands of
+                        dollars every month.</p>
+                    <a href="https://chainstack.com/pricing/">Find out more</a>
+                </div>
+                <div class="world_image">
+                    <img src="example/chainstack_dashboard.jpg" alt="chain stack dashboard">
+                </div>
+            </div>
+            <div>
+                <svg viewBox="0 0 100 0.01">
+                    <line x1="10" y1="" x2="90" y2="0" stroke="black" stroke-width="1" stroke-linecap="round"
+                        stroke-opacity="0.2" />
+                </svg>
+            </div>
+        </div>
+        <!-- mobile dashboard end -->
+
+        <!-- crypto card start -->
+        <div class="line_image_world">
+            <div>
+                <svg viewBox="0 0 100 0.01">
+                    <line x1="10" y1="" x2="90" y2="0" stroke="black" stroke-width="1" stroke-linecap="round"
+                        stroke-opacity="0.2" />
+                </svg>
+            </div>
+    
+            <div class="world_image_data">
+                <div class="world_image">
+                    <img src="example/chainstack_crypto.jpg" alt="chain stack dashboard">
+                </div>
+                <div class="world_text">
+                    <h3>Pay with cryptocurrencies</h3>
+                    <p>Use cryptocurrencies to top up the balance of your Chainstack account. Use the balance towards the
+                        subscription and node usage costs.</p>
+                    <a href="https://chainstack.com/pricing/">Find out more</a>
+                </div>
+            </div>
+            <div>
+                <svg viewBox="0 0 100 0.01">
+                    <line x1="10" y1="" x2="90" y2="0" stroke="black" stroke-width="1" stroke-linecap="round"
+                        stroke-opacity="0.2" />
+                </svg>
+            </div>
+        </div>    
+        <!-- crypto card end -->
+
+        <!-- company logo start -->
+        <div class="brand_logo">
+            <div class="brand_logo_text">
+                <h2>They are talking about us</h2>
+            </div>
+            <div class="brands">
+                <div class="brand_image">
+                    <img src="example/brand_loog/forbes_logo.jpg" alt="forbes_logo">
+                </div>
+                <div class="brand_image">
+                    <img src="example/brand_loog/google_logo.jpg" alt="google_logo">
+                </div>
+                <div class="brand_image">
+                    <img src="example/brand_loog/aws_logo.jpg" alt="aws_logo">
+                </div>
+                <div class="brand_image">
+                    <img src="example/brand_loog/virtuozzo_logo.jpg" alt="virtuozzo_logo">
+                </div>
+                <div class="brand_image">
+                    <img src="example/brand_loog/plygon_logo.jpg" alt="polygon_logo">
+                </div>
+                <div class="brand_image">
+                    <img src="example/brand_loog/bnb_logo.jpg" alt="bnb_chain_logo">
+                </div>
+                <div class="brand_image">
+                    <img src="example/brand_loog/request_logo.jpg" alt="request_logo">
+                </div>
+            </div>
+        </div>
+        <!-- company logo end -->
+
+        <!-- build card start -->
+        <div class="container">
+            <div class="text_body">
+                <h2>Build with us</h2>
+                <p>Discover a wealth of information on how to deploy blockchain infrastructure and build distributed
+                    applications with Chainstack's blockchain nodes.</p>
+            </div>
+            <div class="card_containers">
+    
+                <div class="card_image_email">
+                    <div class="card_image_logo">
+                        <img src="example/card_gif/quick_start.svg" alt="quick start logo">
+                    </div>
+                    <div class="card_image_text">
+                        <h3>Quickstart</h3>
+                        <p>Get up and running in no time with the quickstart guide.</p>
+                    </div>
+                </div>
+    
+                <div class="card_image_email">
+                    <div class="card_image_logo">
+                        <img src="example/card_gif/tool.svg" alt="tools logo">
+                    </div>
+                    <div class="card_image_text">
+                        <h3>Tools</h3>
+                        <p>All the development and blockchain network interaction tools.</p>
+                    </div>
+                </div>
+    
+                <div class="card_image_email">
+                    <div class="card_image_logo">
+                        <img src="example/card_gif/tutorials.svg" alt="tutorials logo">
+                    </div>
+                    <div class="card_image_text">
+                        <h3>Tutorials</h3>
+                        <p>From zero to a working decentralized application in less than an hour.</p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <!-- build card end -->
+
+        <!-- email card start -->
+        <div class="image_email_data">
+            <div class="people_image">
+                <img src="example/container_image/people.jpg" alt="people talking to each other">
+            </div>
+            <div class="people_text">
+                <h2>Never miss an update</h2>
+                <p class="upper_text">Our monthly newsletter is the perfect way to stay up-to-date with the latest industry
+                    news, product
+                    updates, and exclusive promotions.</p>
+                <div class="people_email">
+                    <input type="email" id="people_email" placeholder="Enter email">
+                    <button>Submit</button>
+                </div>
+                <p class="lower_text">By ticking this box you give Chainstack your consent to store and process your email
+                    address to send you
+                    updates. You can unsubscribe from our communications at any time, more details on our <a
+                        href="https://chainstack.com/tos/">T&C</a> and <a href="https://chainstack.com/privacy/">Privacy
+                        Policy</a>.</p>
+                <div class="people_checkbox">
+                    <input type="checkbox" id="people_check">
+                    <p class="lower_text">I agree to receive communications from Chainstack</p>
+                </div>
+            </div>
+        </div>
+        <!-- email card end -->
+
+        <!-- footer start -->
+        <div class="link_collection">
+
+            <div class="link_collection_1">
+    
+                <div class="link_collection_1_image">
+                    <img src="example/chainstack_copy.jpg" alt="chainstack logo">
+                </div>
+    
+                <div class="link_collection_1_location">
+                    <h3>United States</h3>
+    
+                    <p>1 Van de Graaff Drive <br>
+                        Burlington, MA <br>
+                        01803</p>
+    
+                </div>
+    
+                <div class="link_collection_1_location">
+                    <h3>Singapore</h3>
+    
+                    <p>8 Temasek Boulevard <br>
+                        #30-01/02, Suntec Tower 3 <br>
+                        038988
+                    </p>
+    
+                </div>
+    
+                <div class="link_collection_1_icons">
+    
+                    <i class="fa fa-youtube-play"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-telegram"></i>
+                    <i class="fa fa-linkedin-square"></i>
+                    <i class="fa fa-facebook-square"></i>
+                    <i class='fab fa-discord'></i>
+    
+                </div>
+    
+                <p>Chainstack © 2023</p>
+            </div>
+    
+            <div class="link_collection_1">
+                <h3>Platform</h3>
+    
+                <div class="platform_links">
+                    <a href="">solution</a>
+                    <a href="">pricing</a>
+                    <a href="">Enterprise</a>
+                    <a href="">customers</a>
+                    <a href="">marketplace</a>
+                    <a href="">blockchain node</a>
+                    <a href="">hosting</a>
+                    <a href="">chainstack cloud</a>
+                    <a href="">nft api</a>
+                    <a href="">ipfs api</a>
+                    <a href="">subgraphs</a>
+                </div>
+    
+            </div>
+    
+            <div class="link_collection_1">
+                <h3>Chains</h3>
+    
+                <div class="platform_links">
+                    <a href="">Ethereum</a>
+                    <a href="">Polygon</a>
+                    <a href="">BNB Smart Chain</a>
+                    <a href="">Avalanche</a>
+                    <a href="">Arbitrum</a>
+                    <a href="">Optimism</a>
+                    <a href="">NEAR</a>
+                    <a href="">Aurora</a>
+                    <a href="">Solana</a>
+                    <a href="">Aptos</a>
+                    <a href="">Gnosis Chain</a>
+                    <a href="">Cronos</a>
+                    <a href="">Fantom</a>
+                    <a href="">Starknet</a>
+                    <a href="">Harmony</a>
+                    <a href="">Tezos</a>
+                    <a href="">Fuse</a>
+                    <a href="">Bitcoin</a>
+                    <a href="">Hyperledger Fabric</a>
+                    <a href="">Quorum</a>
+                    <a href="">Corda</a>
+                    <a href="">MultiChain</a>
+                </div>
+    
+            </div>
+    
+            <div class="link_collection_1">
+                <h3>Resources</h3>
+    
+                <div class="platform_links">
+                    <a href="">blog</a>
+                    <a href="">newsletter</a>
+                    <a href="">news & events</a>
+                    <a href="">press kit</a>
+                </div>
+    
+            </div>
+    
+            <div class="link_collection_1">
+                <h3>Company</h3>
+    
+                <div class="platform_links">
+                    <a href="">about us</a>
+                    <a href="">contact us</a>
+                    <a href="">careers</a>
+                    <a href="">labs</a>
+                </div>
+    
+            </div>
+    
+            <div class="link_collection_1">
+                <h3>support</h3>
+    
+                <div class="platform_links">
+                    <a href="">help center</a>
+                    <a href="">documentation</a>
+                    <a href="">terms of servies</a>
+                    <a href="">privacy policy</a>
+                    <a href="">status</a>
+                </div>
+    
+            </div>
+            
+        </div>
+        <!-- footer ends-->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+.link_collection
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    align-items: baseline;
+    margin-top: 50px;
+}
+
+.link_collection .link_collection_1
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.link_collection .link_collection_1 p
+{
+    font-family: 'suisseintl-Regular',sans-serif;
+    padding: 22px 0;
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1A1D23;
+}
+
+.link_collection .link_collection_1 h3
+{
+    font-family: 'suisseintl-medium',sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1D23;
+}
+
+
+.link_collection .link_collection_1_image img
+{
+    width: 144px;
+    aspect-ratio: auto 144 / 22;
+    height: 22px;
+}
+
+.link_collection .link_collection_1_location h3
+{
+    font-family: 'suisseintl-medium',sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1D23;
+}
+
+.link_collection .link_collection_1_location p
+{
+    font-family: 'suisseintl-Regular',sans-serif;
+    padding: 22px 0;
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1A1D23;
+}
+
+.link_collection .link_collection_1 .link_collection_1_icons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+}
+
+
+
+.link_collection .link_collection_1 .link_collection_1_icons i
+{
+    width: 30px;
+    aspect-ratio: auto 30 / 30;
+    height: 30px;
+    color: #007bff;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    margin-right: 8px;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.link_collection .link_collection_1 .link_collection_1_icons i:hover
+{
+    font-size: 30px;
+    color: black;
+    filter: drop-shadow(0 0 5px black);
+}
+
+.link_collection .platform_links
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    height: fit-content;
+    width: fit-content;
+}
+
+.link_collection .platform_links a
+{
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: 'suisseintl-Regular',sans-serif;
+    padding: 22px 0;
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1A1D23;
+    margin-top: -25px;
+    transition: 0.5s;
+}
+
+.link_collection .platform_links a:hover
+{
+    font-size: 18px;
+}
+
+@media screen and (max-width: 800px) {
+    .link_collection
+    {
+        width: auto;
+        flex-wrap: wrap;
+    }
+}

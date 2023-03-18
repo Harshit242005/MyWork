@@ -1,0 +1,59 @@
+<!-- this component is completely responsive -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>main chain stack</title>
+  <link rel="stylesheet" href="hovering-card.css">
+</head>
+
+<body>
+  
+  <div class="card_hovering_box">
+    <div id="text" class="card_hovering_box_text">
+      <p>Chainstack uses cookies to provide you with a secure and
+        personalized experience on its website. <a href="http://"> Learn more. </a></p>
+    </div>
+    <div class="card_hovering_box_button">
+      <button id="accept_button">
+        Accept
+      </button>
+    </div>
+  </div>
+  <script>
+    var box = document.getElementsByClassName("card_hovering_box")[0];
+    var text = document.getElementById("text");
+    var button = document.getElementById("accept_button");
+    window.onload = function () {
+      box.style.display = "flex";
+      box.style.flexDirection = "row";
+      box.style.gap = "25px";
+      box.style.justifyContent = "center";
+      box.style.alignContent = "center";
+      box.style.alignItems = "center";
+    };
+
+    var timer;
+
+    box.addEventListener("mouseover", function () {
+      timer = setTimeout(function () {
+        box.style.backgroundColor = "transparent";
+        text.style.color = "black"
+      }, 5000); // set the timeout to 5 seconds (5000 milliseconds)
+    });
+
+    box.addEventListener("mouseout", function () {
+      clearTimeout(timer);
+      box.style.backgroundColor = "black"; // set the background color back to its original value
+      text.style.color = "white"
+    });
+
+    button.addEventListener("click", function() {
+      box.style.display = "none";
+    });
+  </script>
+</body>
+
+</html>

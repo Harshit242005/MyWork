@@ -1,0 +1,170 @@
+.image_email_data
+{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: #F5F8FC;
+}
+
+.image_email_data .people_image img
+{
+    width: 288px;
+    aspect-ratio: auto 288 / 160;
+    height: 160px;
+}
+
+.image_email_data .people_text
+{
+    width: 60%;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 22px;
+    line-height: 32px;
+    padding-right: 20px;
+    /* new add data */
+    display: flex;
+    flex-direction: column;
+    gap: -100px;
+    justify-content: left;
+}
+
+.image_email_data .people_text h2
+{
+    font-family: 'SuisseIntl-SemiBold', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1d23;
+}
+
+.image_email_data .people_text .upper_text
+{
+    font-family: 'SuisseIntl-Regular', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #1a1d23;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+.image_email_data .people_text .lower_text
+{
+    font-family: 'SuisseIntl-Regular', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1a1d23;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+.image_email_data .people_text .lower_text a
+{
+    text-decoration: none;
+}
+
+.image_email_data .people_text .people_email, .people_checkbox
+{
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    justify-content: left;
+    align-items: center;
+}
+
+.image_email_data .people_text .people_email input
+{
+    height: 46px;
+    width: 500px;
+    max-width: auto;
+    color: #76777B;
+    padding: 10px 20px ;
+    border: 1px solid #DDDDDE;
+    box-sizing: border-box;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 6px 0 0 6px;
+}
+
+
+.image_email_data .people_text .people_email button
+{
+    cursor: pointer;
+    background: #007BFF;
+    padding: 11px 60px;
+    display: inline-block;
+    font-family: 'SuisseIntl-SemiBold', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    line-height: 24px;
+    border-radius: 0 6px 6px 0;
+    width: auto;
+    transition: 0.5s;
+}
+
+.image_email_data .people_text .people_email button:hover
+{
+    background-color: black;
+    color: white;
+    text-shadow: 2px 2px 5px white;
+    font-size: 18px;
+    box-shadow: 0 0 6px 3px black;
+    border: none;
+}
+
+.image_email_data .people_text .people_email button:active
+{
+    background-color: #007BFF;
+    box-shadow: none;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 800px) {
+    .image_email_data
+    {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .image_email_data .people_text
+    {
+        width: 90%;
+        
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .image_email_data .people_text .people_email
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image_email_data .people_text .people_email button
+    {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        width: 100%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .image_email_data .people_text .people_email input
+    {
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .image_email_data .people_text .lower_text
+    {
+        font-size: 14px;
+    }
+}

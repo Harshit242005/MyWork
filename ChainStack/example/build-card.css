@@ -1,0 +1,131 @@
+.container
+{
+    background: #F5F8FC;
+    padding: 100px 0;
+}
+
+.card_containers
+{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card_containers .card_image_email
+{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: left;
+    align-items: start;
+    margin-top: 100px;
+    border-radius: 10px;
+    transition: 0.5s;
+    width: 40%;
+    height: fit-content;
+    padding: 50px;
+
+}
+
+.card_image_email:hover
+{
+    box-shadow: 0 0 10px 5px black;
+    border: none;
+    background-color: black;
+    color: white;
+    text-shadow: 2px 2px 5px white;
+}
+
+.card_image_email .card_image_logo img
+{
+    width: 64px;
+    aspect-ratio: auto 64 / 64;
+    height: 64px;
+    transition: 0.5s;
+}
+
+.card_image_email .card_image_text h3
+{
+    font-family: 'SuisseIntl-Regular', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1d23;
+    transition: 0.5s;
+}
+
+.card_image_email:hover .card_image_text h3
+{
+    color: white;
+}
+
+.card_image_email .card_image_text
+{
+    font-family: 'SuisseIntl-Regular', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+    .container .card_containers
+    {
+        flex-direction: column;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -50px;
+        column-gap: -50px;
+    }
+
+    .container .card-containers .card_image_email
+    {
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    
+    .card_image_email .card_image_text
+    {
+        text-align: center;
+    }   
+}
+
+.text_body
+{
+    text-align: center;
+    font-family: 'SuisseIntl-Regular', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text_body h2
+{
+    font-size: 32px;
+    font-family: 'SuisseIntl-SemiBold', sans-serif;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+    .text_body
+    {
+        font-size: 15px;
+        font-weight: 200;
+    }
+
+    .text_body h2
+    {
+        font-size: 25px;
+        font-weight: 400;
+    }
+}

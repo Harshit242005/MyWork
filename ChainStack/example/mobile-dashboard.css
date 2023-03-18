@@ -1,0 +1,61 @@
+.line_image_world
+{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+.world_image_data
+{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.world_image_data .world_image img
+{
+    width: 384px;
+    height: 374px;
+    margin-left: 35px;
+}
+
+.world_image_data .world_text
+{
+    font-family: 'SuisseIntl-Regular', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: black;
+    width: 40%;
+}
+
+.world_image_data .world_text h3
+{
+    font-size: 22px;
+}
+
+.world_image_data .world_text a
+{
+    color: #007bff;
+    font-family: 'SuisseIntl-SemiBold', sans-serif;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+    .world_image_data
+    {
+        flex-direction: column;
+    }
+
+    .world_image_data .world_text
+    {
+        width: 100%;
+        text-align: center;
+        font-size: 17px;
+        margin-left: 20px;
+        font-weight: 200;
+        margin-right: 20px;
+    }
+}

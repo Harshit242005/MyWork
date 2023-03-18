@@ -1,0 +1,79 @@
+<!-- this component is completely responsive -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation bar</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar_container">
+        <div class="top_info">
+            <p>we know support <span>optimism</span> on testnet. <a href="">Find out more</a></p>
+        </div>
+        <div id="nav" class="navbar">
+            <div class="navbar_image">
+                <img id="logo_image" src="companylogo/chainstack_copy.jpg" alt="chainstack logo">
+            </div>
+            <div id="navbar_button" class="navbar_mainlinks">
+                <a href="">Prodcut</a>
+                <a href="">Pricing</a>
+                <a href="">Enterprise</a>
+                <a href="">Customers</a>
+                <a href="">Blog</a>
+                <a href="">Docs</a>
+            </div>
+            <div id="click_button" class="navbar_buttons">
+                <button>Log in</button>
+                <button>Start for free</button>
+            </div>
+            <div id="open" class="open_button">
+                <i class="fa fa-bars"></i>
+            </div>
+
+            <button class="close_button" id="close">&times;</button>
+        </div>
+
+    </div>
+
+    <script>
+        var open_button = document.getElementById('open');
+        var start = document.getElementById('nav');
+        var company_logo = document.getElementById('logo_image');
+        var last_button = document.getElementById('click_button');
+        var buttons = document.getElementById('navbar_button');
+        var close_button = document.getElementById('close');
+        open_button.addEventListener("click", function () {
+            company_logo.style.display = "none";
+            buttons.style.display = "flex";
+            buttons.style.flexDirection = "column";
+            buttons.style.justifyContent = "center";
+            buttons.style.alignItems = "center";
+            buttons.style.gap = "25px";
+            start.style.flexDirection = "column";
+            start.style.justifyContent = "center";
+            start.style.gap = "0px";
+            last_button.style.display = "block";
+            last_button.style.flexDirection = "column";
+            last_button.style.justifyContent = "center";
+            close_button.style.display = "block";
+            open_button.style.display = "none";
+        });
+        close_button.addEventListener("click", function () {
+            buttons.style.display = "none"
+            company_logo.style.display = "block";
+            last_button.style.display = "none";
+            close_button.style.display = 'none';
+            start.style.flexDirection = "row";
+            last_button.style.flexDirection = "row";
+            start.style.gap = "100px";
+            open_button.style.display = "block"
+        })
+    </script>
+</body>
+
+</html>

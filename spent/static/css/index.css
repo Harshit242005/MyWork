@@ -1,0 +1,22 @@
+body
+{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+input
+{
+    width: 400px;
+    height: 100px;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}

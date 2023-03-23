@@ -1,0 +1,73 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+</head>
+<body>
+    <p>this is the first template we have renderd</p>
+</body>
+</html> -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<body>
+
+    <form action="http://localhost:5000/login" method="post">
+        <p>Enter name : </p>
+        <input type="text" name="thing">
+        <input type="number" name="spent">
+        <input type="submit" value="submit">
+        <button id="get-database-data">Get data</button>
+    </form>
+
+    <form action="{{ url_for('show_data') }}" method="post">
+        <p>Select month : </p>
+        <select name="month">
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+        <input type="submit" id="show" value="show data">
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $("#get-database-data").click(function() {
+                $.get("/get_data", function(data) {
+                    alert(data);
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $("#show").click(function() {
+                $.get("/show_data", function(data) {
+                    alert(data);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

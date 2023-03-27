@@ -1,0 +1,144 @@
+.first-image
+{
+    margin-top: 0px;
+    animation: animation_1 0.5s 2s 1;
+}
+
+.second-image
+{
+    transform: rotate(90deg);
+    margin-left: 115px;
+    margin-top: -100px;
+    animation: animation_2 0.5s 2s 1;
+}
+
+.third-image
+{
+    transform: rotate(-90deg);
+    margin-top: -160px;
+    margin-right: 120px;
+    animation: animation_3 0.5s 2s 1;
+}
+
+.fourth-image
+{
+    transform: rotate(-180deg);
+    margin-top: -100px;
+    margin-right: 0px;
+    animation: animation_4 0.5s 2s 1;
+}
+
+.star
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    filter: drop-shadow(0 2px 10px rgb(43, 206, 231));
+}
+
+@keyframes animation_1 {
+    from {margin-top: -400px;}
+    to {margin-top: 0px; }
+}
+
+@keyframes animation_2 {
+    from {margin-left: -460px;}
+    to {margin-left: 115px; }
+}
+
+@keyframes animation_3 {
+    from {margin-right: -880px;}
+    to {margin-right: 120px; }
+}
+
+@keyframes animation_4 {
+    from {margin-top: 800px;}
+    to {margin-top: -100px; }
+}
+
+.logo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    margin-top: 250px;
+}
+
+
+.triangle
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -25px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.triangle .first-triangle
+{
+    animation: animation-1 1s  -1s infinite alternate-reverse;
+    animation-play-state: running;
+    width: fit-content;
+    height: fit-content;
+}
+
+.triangle .second-triangle
+{
+    margin-top: -500px;
+    margin-left: 25px;
+    width: fit-content;
+    height: fit-content;
+    animation: animation-2 1s  -1s infinite alternate-reverse;
+    animation-play-state: running;
+}
+
+@keyframes animation-1 {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes animation-2 {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+
+.logo .logo-heading
+{
+    margin-top: 100px;
+    z-index: 1;
+}
+
+.logo .logo-heading p
+{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 6px white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    letter-spacing: 10px;
+    margin-left: 23px;
+    animation: text-animation 0.5s 2s 1;
+}
+
+.logo .star-triangle
+{
+    margin-top: -324px;
+}
+
+@keyframes text-animation {
+    from {font-size: 15px;}
+    to {font-size: 18px;}
+}
